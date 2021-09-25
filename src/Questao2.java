@@ -6,7 +6,7 @@ public class Questao2 {
 
         int opcao;
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);// <- Erro: falta do método close() para fechar o Scanner()
         double n1, n2, divisao, raio, area;
 
         do {
@@ -45,6 +45,7 @@ public class Questao2 {
                     break;
                 case 4:
                     System.out.println("Fim do programa!");
+                    input.close();
                 default:
                     System.out.println("Opção inválida!");
             }
