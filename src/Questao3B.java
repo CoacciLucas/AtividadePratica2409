@@ -19,13 +19,14 @@ public class Questao3B {
         }
         for (int i = 0; i < 10; i++) {// <- Defeito: Presença de i <= 10 faz com que haja uma tentativa de se
                                       // adicionar 11 índices em um vetor com 10 índices
-            for (int j = 0; j < 10; j++) {// <- Defeito: Presença de j <= 10 faz com que haja uma tentativa de se
-                                          // adicionar 11 índices em um vetor com 10 índices
+            // for (int j = 0; j < 10; j++) {// <- Defeito: Presença de j <= 10 faz com que
+            // haja 100 verificações em um
+            // vetor com 10 indices
 
-                if (vetor1[i] == vetor2[j]) {
-                    cont++;
-                }
+            if (vetor1[i] == vetor2[i]) {
+                cont++;
             }
+            // }
         }
         input.close();
 
