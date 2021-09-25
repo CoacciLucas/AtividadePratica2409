@@ -46,6 +46,7 @@ public class Questao2 {
                 case 4:
                     System.out.println("Fim do programa!");
                     input.close();
+                    break; // falta do break <- erro
                 default:
                     System.out.println("Opção inválida!");
             }
