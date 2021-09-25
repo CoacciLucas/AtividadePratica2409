@@ -29,14 +29,14 @@ public class Principal {
                 case 2:
                     System.out.println("Digite o raio: ");
                     raio = input.nextDouble();
-                    area = Math.PI * Math.pow(raio, 3);
+                    area = Math.PI * Math.pow(raio, 2); // area = Math.PI * Math.pow(raio, 3); <- falha
                     System.out.format("Área do círculo: %.2f\n", area);
                     break;
                 case 3:
                     System.out.println("Digite os 5 números: ");
                     double numeros[] = new double[5];
                     double soma = 0;
-                    for (int i = 0; i <= 4; i++) {
+                    for (int i = 0; i < 5; i++) { // for (int i = 1; i <= 5; i++) <- defeito
                         numeros[i] = input.nextDouble();
                         soma = soma + numeros[i];
                     }
@@ -48,10 +48,7 @@ public class Principal {
                 default:
                     System.out.println("Opção inválida!");
             }
-        } while (opcao != 4); // while (opcao <= 4); <- Falha no código, o programa irá parar de executar ao
-                              // digitar um número maior do que 4,
-                              // sendo que é necessário que o programa pare de executar apenas se digitar o
-                              // número 4
+        } while (opcao != 4); // while (opcao <= 4); <- erro
     }
 
 }
